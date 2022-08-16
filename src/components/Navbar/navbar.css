@@ -1,7 +1,17 @@
-.navbar{
-    padding-top: 15px;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap");
+.navbar {
+  padding-top: 15px;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.logo {
+  font-weight: lighter;
+  font-family: "Pacifico" !important;
+}
+.logo span {
+  font-family: "Oleo Script Swash Caps";
+  font-weight: lighter !important;
 }
