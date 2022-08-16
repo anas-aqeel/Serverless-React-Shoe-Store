@@ -1,0 +1,26 @@
+.main{
+    margin-top: 60px;
+    padding: 0 25px;
+}
+.popular-products-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popular-products-heading{
+    font-size: 50px;
+    color: white;
+    line-height: 75px;
+    word-spacing: 5px;
+    font-family: 'Archivo Black', sans-serif;
+}
+.popular-products-heading span{
+    color: #e05849;  
+}
+.popular-products-body{
+
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

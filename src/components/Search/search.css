@@ -13,7 +13,7 @@
   border: none;
   outline: none;
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 480px) {
   .div{
     display: none;
   }

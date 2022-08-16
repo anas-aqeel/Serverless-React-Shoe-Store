@@ -4,10 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-.product{
-  padding: 0 15px;
-  background: linear-gradient(135deg, #13171C, #1D2328 );
-  height: 100vh;
+.home{
+  background: linear-gradient(90deg, #13171C, #1D2328 );
+  min-height: 100vh;
+  max-height: auto;
   width: 100%;
 }
 @media only screen and (max-width: 600px) {

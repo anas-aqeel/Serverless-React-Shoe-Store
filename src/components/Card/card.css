@@ -1,0 +1,8 @@
+.add_to_cart_btn{
+    padding: 7px;
+    outline: 1px solid rgb(102, 102, 102);
+    color: white;
+    font-weight: light;
+    font-size: 11px;
+    background: linear-gradient(149.79deg, #1C2A37 1%, #3E2018 100%);
+}

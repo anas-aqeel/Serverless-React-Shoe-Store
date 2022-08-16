@@ -15,7 +15,7 @@ export default function SearchField({ bgColor, color, sx }) {
     return (
         <button
             onClick={() => {
-                setActive(!active);
+                setActive(true);
             }}
             className="div"
             style={{ backgroundColor: bgColor, color }}

@@ -69,7 +69,7 @@ const Navbar = () => {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  sx={{ my: 0, color: "inherit", display: "block" }}
+                  sx={{px:2, my: 0, color: "inherit", display: "block" }}
                 >
                   <Typography variant="body2" textTransform={"capitalize"}>
                     {page}
