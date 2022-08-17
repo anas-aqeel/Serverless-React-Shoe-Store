@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 *{
   margin: 0;
   padding: 0;
@@ -8,7 +10,8 @@
   background: linear-gradient(90deg, #13171C, #1D2328 );
   min-height: 100vh;
   max-height: auto;
-  width: 100%;
+
+  width: 100vw;
 }
 @media only screen and (max-width: 600px) {
   .product {

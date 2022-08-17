@@ -4,6 +4,7 @@ import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import ProductCard from "../Card/ProductCard";
 import "./popular-products.css";
+import { Grid } from "@mui/material";
 
 const PopularProducts = () => {
   return (
@@ -28,13 +29,23 @@ const PopularProducts = () => {
           </CustomIconButton>
         </div>
       </div>
-      <div className="popular-products-body">
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-        <ProductCard/>
-      </div>
+      <Grid container spacing={1} className="popular-products-body">
+        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+          <ProductCard />
+        </Grid>
+        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+          <ProductCard />
+        </Grid>
+        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+          <ProductCard />
+        </Grid>
+        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+          <ProductCard />
+        </Grid>
+        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+          <ProductCard />
+        </Grid>
+      </Grid>
     </div>
   );
 };

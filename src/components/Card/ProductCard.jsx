@@ -10,12 +10,12 @@ import './card.css'
 
 export default function ProductCard() {
     return (
-        <Card sx={{ maxWidth: 205, mb: 1, mx:1, pb:1, borderRadius:'10px', background:'transparent'}}>
+        <Card sx={{ mb: 1,  pb:1, borderRadius:'10px', background:'transparent'}}>
             <CardMedia
                 sx={{ p: 3,background: 'linear-gradient(149.79deg, #1C2A37 1%, #3E2018 100%)' }}
                 component="img"
                 alt="green iguana"
-                height="140"
+                // height="140"
                 image={image}
             />
             <CardContent sx={{ py: 0, px: 1, pt: 1 }}>

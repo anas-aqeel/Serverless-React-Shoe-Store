@@ -10,17 +10,29 @@
 .popular-products-heading{
     font-size: 50px;
     color: white;
-    line-height: 75px;
-    word-spacing: 5px;
     font-family: 'Archivo Black', sans-serif;
 }
 .popular-products-heading span{
     color: #e05849;  
 }
-.popular-products-body{
+.grid-item{
+    justify-self: center;
+    align-self: center;
+}
+/* .popular-products-body{
 
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+} */
+@media only screen and (max-width: 930px) {
+    .popular-products-heading{
+    font-size: 35px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .popular-products-heading{
+    font-size: 25px;
+    }
 }

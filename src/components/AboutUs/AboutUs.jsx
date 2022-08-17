@@ -10,7 +10,7 @@ const AboutUs = () => {
         {/* <div className="about-us-1-bg-box"></div> */}
         <img src={image} className="about-us-1-img" />
       </Grid>
-      <Grid item lg={1} md={1} sm={1} xs={1}></Grid>
+      <Grid item lg={0.3} md={0.3} sm={1} xs={1}></Grid>
       <Grid item lg={7} md={6} sm={7} xs={12} className="about-us-2">
         <div className="about-us-heading">About Us</div>
         <div className="about-us-sub-heading">
