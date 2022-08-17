@@ -71,7 +71,10 @@
     visibility: hidden;
 }
 .rating{
-    flex-grow: 1
+    flex-grow: 0;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .rating span{
     margin-right: 2px;
@@ -100,6 +103,7 @@
     margin-top: 15px;
     padding: 15px 15px;
     width: 190px;
+    background: linear-gradient(90deg, #13171C, #1D2328 );
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 8px;
 }
@@ -128,9 +132,20 @@
     }
   } 
 @media only screen and (max-width: 899px) {
+    
     .container_grid{
         height: 400px;
     }
+    .col_2{
+        display: none;
+    }
+    .container{
+        background-image: url('https://62fb6b81e4f5de009df11f5f--coruscating-rolypoly-63f16c.netlify.app/static/media/home1.f60a15b99366ca210bf9.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+    }
+
 } 
 @media only screen and (max-width: 650px) {
     .container_grid{
