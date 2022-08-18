@@ -21,6 +21,10 @@
 .testimonials-heading span{
     color: #e05849;  
 }
+.testimonials-body{
+    display: flex;
+    justify-content: space-between;
+}
 @media only screen and (max-width: 930px) {
     .testimonials-heading{
     font-size: 35px;

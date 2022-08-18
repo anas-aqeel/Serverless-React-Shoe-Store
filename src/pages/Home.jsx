@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutUs from '../components/AboutUs/AboutUs'
 import Navbar from '../components/Navbar/Navbar'
+import Newsletter from '../components/Newsletter/Newsletter'
 import PopularProducts from '../components/PopularProducts/PopularProducts'
 import Container from '../components/ProductContainer/Container'
 import ProductDetails from '../components/ProductDetails/ProductDetalis'
@@ -17,6 +18,7 @@ const Home = () => {
         <AboutUs/>
         <ProductDetails/>
         <Testimonials/>
+        <Newsletter/>
     </dir>
   )
 }
