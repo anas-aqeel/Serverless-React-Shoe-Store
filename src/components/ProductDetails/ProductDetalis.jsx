@@ -2,44 +2,35 @@ import React from "react";
 import "./product-details.css";
 import image from "../../assets/images/home.png";
 import { Button, Grid } from "@mui/material";
+import { FeaturedProductCard } from "../Card/ProductCard";
 const ProductDetails = () => {
   return (
-    <Grid
+    <div
       container
       direction="row"
       alignItems="center"
-      justifyContent="space-between"
-      spacing={0}
-      className="about-us-container"
+      justifyContent="center"
+      className="featured-product-container"
     >
-      <Grid item lg={6} md={6} sm={12} xs={12} className="about-us-2">
+      <div className="featured-product-2">
 
-        <div className="about-us-heading">About Us</div>
-        <div className="about-us-sub-heading">
-          We Provide High <span>Quality</span> Shoes.
+        <div className="featured-product-heading">Product Details</div>
+        <div className="featured-product-sub-heading">
+          Get to Know Our Featured  <span>Product</span>.
         </div>
-        <div className="about-us-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          tenetur eum quos placeat itaque voluptatum minima! Lorem ipsum dolor
-          debitis sit quaerat eius minima neque odio veritatis?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+        <div className="featured-product-text">
           tenetur eum quos placeat itaque voluptatum minima! Lorem ipsum dolor
           debitis sit quaerat eius minima neque odio veritatis?
           sit amet consectetur adipisicing elit. Sed nisi asperiores pariatur
-          <br />
-          tenetur eum quos placeat itaque voluptatum minima! Lorem ipsum dolor
-          debitis sit quaerat eius minima neque odio veritatis?
-          sit amet consectetur adipisicing elit. Sed nisi asperiores pariatur
-
         </div>
-        <Button className="shopnow_btn about-us-btn">Explore More</Button>
-      </Grid>
-      <Grid item lg={5} md={5} sm={12} xs={12} className="about-image-grid">
-        <div className="about-us-1">
-        <img src={image} alt="AboutUsImage" className="about-us-1-img" />
+        <Button className="shopnow_btn featured-product-btn">Explore More</Button>
+      </div>
+      <div className="featured-product-grid">
+        <div className="featured-product-1">
+          <FeaturedProductCard />
         </div>
-      </Grid>
-    </Grid>
+      </div>    
+    </div>
   );
 };
 

@@ -1,50 +1,44 @@
-.about-us-container {
+.featured-product-container {
     margin-top: 40px;
     padding: 25px 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
-  .about-us-1 {
-    height: 340px !important;
+  .featured-product-grid{
+    border-radius: 10px;
+    padding: 4px;
+    /* background: linear-gradient(180deg, #7F249A 39.58%, #253DAB 100%);  */
+  }
+  .featured-product-1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column !important;
     position: relative;
-    background: linear-gradient(136.7deg, #5597ee 0%, #fd6451 100%);
+    /* background: linear-gradient(95.15deg, #5298F2 0%, #FF6452 100%); */
     border-radius: 10px;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-  .about-image-grid{
-    border-radius: 10px;
-    padding: 2px;
-    background: linear-gradient(180deg, #7F249A 39.58%, #253DAB 100%);
-  }
-  .about-us-1-img {
-    height: 360px;
-    width: 500px;
-    z-index: 2;
-    rotate: 18deg;
-  }
   
-  .about-us-2 {
+  .featured-product-2 {
     display: flex;
     flex-direction: column !important;
     width: 550px;
     margin: 20px 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    margin-right: 20px;
   }
-  .about-us-heading {
+  .featured-product-heading {
     font-weight: 700;
     color: #c6532e;
     font-size: 16px;
     font-family: "roboto";
   }
-  .about-us-sub-heading {
+  .featured-product-sub-heading {
     font-size: 58px;
     font-weight: bold;
     font-family: "roboto";
@@ -52,61 +46,60 @@
     color: white;
     margin: 20px 0;
   }
-  .about-us-sub-heading span {
+  .featured-product-sub-heading span {
     color: #fc6838;
   }
-  .about-us-text {
+  .featured-product-text {
     margin-top: 10px;
     font-weight: 400;
     font-size: 13px;
     font-family: "roboto";
     color: #979797;
   }
-  .about-us-btn {
+  .featured-product-btn {
     color: white !important;
     text-transform: capitalize;
     width: 170px;
   }
   @media only screen and (max-width: 1155px) {
-    .about-us-sub-heading {
+    .featured-product-sub-heading {
       font-size: 51px;
     }
-    .about-us-1-img {
+    .featured-product-1-img {
       height: 200px;
-      width: 350px;
-    }
-  
-  
-  }
-  @media only screen and (max-width: 879px) {
-       .about-us-sub-heading {
-          font-size: 46px;
-        } 
-  }
-  @media only screen and (max-width: 760px) {
-    .about-us-sub-heading {
-      font-size: 48px;
-    }
-    .about-us-text {
-      font-size: 12px;
+      width: 250px;
     }
   }
-  @media only screen and (max-width: 570px) {
-    .about-us-sub-heading {
+  @media only screen and (max-width: 1030px) {
+    .featured-product-sub-heading{
       font-size: 35px;
     }
-    .about-us-text {
+    /* .featured-image{
+      width: 320px;
+    } */
+  }
+  @media only screen and (max-width: 780px) {
+    .featured-product-container{
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
+  @media only screen and (max-width: 570px) {
+    .featured-product-text {
       font-size: 12px;
     }
   }
   @media only screen and (max-width: 500px) {
-      .about-us-1-img {
+      .featured-product-1-img {
           height: 200px;
-          width: 330px;
+          width: 230px;
       }
   }
   @media only screen and (max-width: 500px) {
-      .about-us-1-img {
+      .featured-product-1-img {
           height: 170px;
           width: 280px;
       }
