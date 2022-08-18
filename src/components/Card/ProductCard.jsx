@@ -24,14 +24,15 @@ export default function ProductCard() {
     >
       <div
         style={{
-          padding: "3px 0",
           borderRadius: "10px",
+          paddingBottom: '10px',
           background: "linear-gradient(90deg, #13171C, #1D2328 )",
         }}
       >
         <CardMedia
           sx={{
             p: 3,
+            borderRadius: '10px',
             maxWidth: "350px",
             background: "linear-gradient(149.79deg, #1C2A37 1%, #3E2018 100%)",
           }}
@@ -93,22 +94,23 @@ export function FeaturedProductCard({ className }) {
           alignItems: 'center'
         }}
       >
-        <div style={{
-          background: "linear-gradient(149.79deg, #1C2A37 1%, #3E2018 100%)",
-          borderRadius: '10px 10px 0 0',
-          display:'flex',
-          justifyContent:'center',
-          
-        }}>
-          <img src={featuredImage} className='featured-image' alt="Featured Image" width='400px'/>
+        <div
+          className="featured-product"
+          style={{
+            background: "linear-gradient(149.79deg, #1C2A37 1%, #3E2018 100%)",
+            borderRadius: '10px 10px 0 0',
+            display: 'flex',
+            justifyContent: 'center',
+
+          }}>
+          <img src={featuredImage} className='featured-product' height={'auto'} alt="Featured Image" />
         </div>
         <CardActions
-          // className="featured-product-1-img"
+          className="featured-product"
           sx={{
-            width:'400px',
             py: 0,
             display: "flex",
-            alignItems: "center",
+            alignItems: "end",
             justifyContent: "space-between",
             padding: '5px 8px',
             boxShadow: 'rgba(17, 12, 46, 0.15) 0px 48px 75px 0px',
@@ -118,7 +120,8 @@ export function FeaturedProductCard({ className }) {
         >
           <div>
             <Typography
-              sx={{  py:1,color: "white", fontWeight: "bold" }}
+              className="featured-product-heading"
+              sx={{ py: 1, color: "white", fontWeight: "bold" }}
               variant="h5"
             >
               The Products Series 71

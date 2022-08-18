@@ -18,23 +18,27 @@ body{
 .home{
   min-height: 100vh;
   max-height: auto;
-  width: 100vw;
-  max-width: min(var(--container-width), calc(100vw - 180px));
+  /* width: 100vw; */
+  max-width: min(var(--container-width), calc(100vw - 250px));
 }
 
+@media only screen and (max-width: 850px) {
+  .home{
+     max-width: min(var(--container-width), calc(100vw - 150px));
+
+  }
+}
 @media only screen and (max-width: 600px) {
   .product {
     padding: 0;
   }
-}
-@media only screen and (max-width: 600px) {
   .home{
    max-width: min(var(--container-width), calc(100vw - 50px));
   }
 }
 @media only screen and (max-width: 450px) {
   .home{
-   max-width: min(var(--container-width), calc(100vw - 20px));
+   max-width: min(var(--container-width), calc(100vw - 40px));
   }
 }
 

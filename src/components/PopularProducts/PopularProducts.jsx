@@ -36,7 +36,7 @@ const PopularProducts = () => {
         direction="row"
         alignItems="center"
         justifyContent="center"
-        spacing={5}
+        spacing={1}
       >
         <Grid item lg={3} md={4} sm={6}>
           <ProductCard />
