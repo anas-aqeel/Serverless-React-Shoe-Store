@@ -3,6 +3,7 @@ import AboutUs from '../components/AboutUs/AboutUs'
 import Navbar from '../components/Navbar/Navbar'
 import PopularProducts from '../components/PopularProducts/PopularProducts'
 import Container from '../components/ProductContainer/Container'
+import ProductDetails from '../components/ProductDetails/ProductDetalis'
 
 import '../index.css'
 
@@ -13,6 +14,8 @@ const Home = () => {
         <Container/>
         <PopularProducts/>
         <AboutUs/>
+        <ProductDetails/>
+
     </dir>
   )
 }
