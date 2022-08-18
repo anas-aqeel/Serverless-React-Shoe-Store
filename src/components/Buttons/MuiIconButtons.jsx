@@ -1,9 +1,11 @@
 import { IconButton } from '@mui/material'
 import React from 'react'
+import './buttons.css'
 
-export const CustomIconButton = ({children, style, onClick}) => {
+export const CustomIconButton = ({children, style, onClick, className}) => {
     return (
         <IconButton
+            className={className}
             sx={{
                 p: 1,
                 borderRadius: '5px',

@@ -1,11 +1,13 @@
 .main{
     margin-top: 60px;
-    padding: 0 25px;
+    /* padding: 0 25px; */
 }
+
 .popular-products-head{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 .popular-products-heading{
     font-size: 50px;
@@ -16,13 +18,13 @@
     color: #e05849;  
 }
 .grid-item{
-    justify-self: center;
-    align-self: center;
+    display: flex;
+    justify-content: center;
 }
 /* .popular-products-body{
 
     margin-top: 30px;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: center;
 } */
@@ -33,6 +35,18 @@
 }
 @media only screen and (max-width: 600px) {
     .popular-products-heading{
-    font-size: 25px;
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .popular-products-heading{
+        font-size: 20px
+    }
+    .popular-products-arrows{
+        padding: 3px !important;
+    }
+    .popular-products-arrows svg{
+        height: 15px;
+        width: 15px;
     }
 }

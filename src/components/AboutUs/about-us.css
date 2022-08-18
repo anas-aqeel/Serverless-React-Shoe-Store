@@ -1,13 +1,13 @@
 .about-us-container {
   margin-top: 40px;
-  padding: 25px 20px;
+  padding: 25px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .about-us-1 {
-  height: 250px !important;
+  height: 340px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,13 @@
   position: relative;
   background: linear-gradient(136.7deg, #5597ee 0%, #fd6451 100%);
   border-radius: 10px;
-
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.about-image-grid{
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(180deg, #7F249A 39.58%, #253DAB 100%);
 }
 .about-us-1-img {
   height: 360px;
@@ -29,6 +35,8 @@
   flex-direction: column !important;
   width: 550px;
   margin: 20px 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .about-us-heading {
   font-weight: 700;
@@ -85,7 +93,7 @@
 }
 @media only screen and (max-width: 570px) {
   .about-us-sub-heading {
-    font-size: 48px;
+    font-size: 35px;
   }
   .about-us-text {
     font-size: 12px;

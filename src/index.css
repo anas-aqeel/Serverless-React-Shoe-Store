@@ -1,20 +1,40 @@
 body{
   overflow-x: hidden;
+  width: 100vw;
+  background: linear-gradient(90deg, #13171C, #1D2328 );
+  display: flex;
+  justify-content: center;
 }
+
+:root {
+  --container-width: 1371px;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .home{
-  background: linear-gradient(90deg, #13171C, #1D2328 );
   min-height: 100vh;
   max-height: auto;
-
   width: 100vw;
+  max-width: min(var(--container-width), calc(100vw - 80px));
 }
+
 @media only screen and (max-width: 600px) {
   .product {
     padding: 0;
   }
 }
+@media only screen and (max-width: 600px) {
+  .home{
+   max-width: min(var(--container-width), calc(100vw - 50px));
+  }
+}
+@media only screen and (max-width: 450px) {
+  .home{
+   max-width: min(var(--container-width), calc(100vw - 20px));
+  }
+}
+

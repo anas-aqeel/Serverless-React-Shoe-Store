@@ -27,7 +27,7 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style={{padding: 0}}>
         <Toolbar
           style={{
             display: "flex",

@@ -16,6 +16,7 @@ const PopularProducts = () => {
         <div>
           <CustomIconButton
             style={{ outline: "1px solid #9b9999", background: "transaprent" }}
+            className="popular-products-arrows"
           >
             <WestIcon style={{ color: "#9b9999" }} />
           </CustomIconButton>
@@ -24,25 +25,32 @@ const PopularProducts = () => {
               background:
                 "linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)",
             }}
+            className="popular-products-arrows"
           >
             <EastIcon style={{ color: "#f1dfdf" }} />
           </CustomIconButton>
         </div>
       </div>
-      <Grid container spacing={1} className="popular-products-body">
-        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        spacing={1}
+      >
+        <Grid item lg={3} md={4} sm={6}>
           <ProductCard />
         </Grid>
-        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+        <Grid item lg={3} md={4} sm={6}>
           <ProductCard />
         </Grid>
-        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+        <Grid item lg={3} md={4} sm={6}>
           <ProductCard />
         </Grid>
-        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+        <Grid item lg={3} md={4} sm={6}>
           <ProductCard />
         </Grid>
-        <Grid className="grid-item" item lg={2.4} md={3} sm={4} xm={6}>
+        <Grid item lg={3} md={4} sm={6}>
           <ProductCard />
         </Grid>
       </Grid>

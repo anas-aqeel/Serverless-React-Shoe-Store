@@ -2,7 +2,7 @@
 
 .container {
   margin-top: 20px;
-  padding: 0 15px;
+  padding: 0 !important;
   height: 500px;
 }
 .container_grid {
@@ -135,10 +135,11 @@
     display: none;
   }
   .container {
-    background-image: url("https://62fb6b81e4f5de009df11f5f--coruscating-rolypoly-63f16c.netlify.app/static/media/home1.f60a15b99366ca210bf9.png");
+    background-image: url("../../assets/images/home.png");
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;
+    background-size: contain;
   }
 }
 @media only screen and (max-width: 650px) {
