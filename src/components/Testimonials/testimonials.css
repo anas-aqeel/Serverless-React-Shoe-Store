@@ -1,8 +1,5 @@
 .testimonial-container{
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100vw !important;
+    /* width: 100vw !important; */
     padding: 20px  125px !important;
     background: linear-gradient(90.25deg, #0E1212 0.21%, #422119 99.8%);
 }
