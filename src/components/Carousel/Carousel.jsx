@@ -15,7 +15,7 @@ const breakPoints = [
 ];
 
 const handleArrows = (e) => {
-  return e.type == "NEXT" ? (
+  return e.type === "NEXT" ? (
     <CustomIconButton
       onClick={e.onClick}
       style={{
@@ -53,9 +53,9 @@ export default function CustomCarousel() {
           breakPoints={breakPoints}
           pagination={false}
         >
-          {testimonialsList.map((item) => (
+          {testimonialsList.map((item,index) => (
             <RenderCard
-              key={item.name}
+              key={index}
               avatar={item.avatar}
               review={item.review}
               rating={item.rating}

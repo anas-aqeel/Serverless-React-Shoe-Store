@@ -7,10 +7,6 @@ import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlin
 const ProductDetails = () => {
   return (
     <div
-      container
-      direction="row"
-      alignItems="center"
-      justifyContent="center"
       className="featured-product-container"
     >
       <div className="featured-product-2">
