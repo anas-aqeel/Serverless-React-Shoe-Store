@@ -15,15 +15,16 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-.home{
-  min-height: 100vh;
-  max-height: auto;
+.home,.testimonials-wrapper{
   justify-self: center;
+  justify-content: center;
+  align-items: center;
   max-width: min(var(--container-width), calc(100vw - 250px));
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 850px) {
-  .home{
+  .home, .testimonials-wrapper{
      max-width: min(var(--container-width), calc(100vw - 150px));
 
   }
@@ -32,12 +33,12 @@ body{
   .product {
     padding: 0;
   }
-  .home{
+  .home,.testimonials-wrapper{
    max-width: min(var(--container-width), calc(100vw - 50px));
   }
 }
 @media only screen and (max-width: 450px) {
-  .home{
+  .home,.testimonials-wrapper{
    max-width: min(var(--container-width), calc(100vw - 40px));
   }
 }

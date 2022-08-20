@@ -13,30 +13,32 @@ import CustomCarousel from "../Carousel/Carousel";
 const Testimonials = () => {
   return (
     <div className="testimonial-container">
-      <div className="testimonials-head">
-        <div className="testimonials-heading">
-          What our <br /> <span>Customer Says</span>
+      <div className="testimonials-wrapper">
+        <div className="testimonials-head">
+          <div className="testimonials-heading">
+            What our <br /> <span>Customer Says</span>
+          </div>
+          <div>
+            <CustomIconButton
+              style={{ outline: "1px solid #9b9999", background: "transaprent" }}
+              className="testimonials-arrows"
+            >
+              <WestIcon style={{ color: "#9b9999" }} />
+            </CustomIconButton>
+            <CustomIconButton
+              style={{
+                background:
+                  "linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)",
+              }}
+              className="testimonials-arrows"
+            >
+              <EastIcon style={{ color: "#f1dfdf" }} />
+            </CustomIconButton>
+          </div>
         </div>
-        <div>
-          <CustomIconButton
-            style={{ outline: "1px solid #9b9999", background: "transaprent" }}
-            className="testimonials-arrows"
-          >
-            <WestIcon style={{ color: "#9b9999" }} />
-          </CustomIconButton>
-          <CustomIconButton
-            style={{
-              background:
-                "linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)",
-            }}
-            className="testimonials-arrows"
-          >
-            <EastIcon style={{ color: "#f1dfdf" }} />
-          </CustomIconButton>
+        <div className="testimonials-body">
+            <CustomCarousel/>
         </div>
-      </div>
-      <div className="testimonials-body">
-          {/* <CustomCarousel/> */}
       </div>
     </div>
   );
@@ -45,7 +47,7 @@ const Testimonials = () => {
 export const RenderCard = ({ avatar, review, rating, name }) => {
 
   return (
-    <Card elevation={0} sx={{ width: 345, background: "transparent" }}>
+    <Card elevation={0} sx={{ maXwidth: 345, background: "transparent" }}>
       <CardActionArea>
         <Avatar
           alt="Remy Sharp"

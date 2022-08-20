@@ -1,6 +1,7 @@
 .testimonial-container{
-    /* width: 100vw !important; */
-    padding: 20px  125px !important;
+    padding: 50px 0;
+    margin: 0 auto;
+    width: 100vw;
     background: linear-gradient(90.25deg, #0E1212 0.21%, #422119 99.8%);
 }
 .testimonials-head{
@@ -11,17 +12,14 @@
 }
 .testimonials-heading{
     font-size: 50px;
-    line-height: 45px;
+    /* line-height: 45px; */
     color: white;
     font-family: 'Archivo Black', sans-serif;
 }
 .testimonials-heading span{
     color: #e05849;  
 }
-.testimonials-body{
-    display: flex;
-    justify-content: space-between;
-}
+
 @media only screen and (max-width: 930px) {
     .testimonials-heading{
     font-size: 35px;
