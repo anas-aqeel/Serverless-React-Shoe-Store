@@ -1,5 +1,98 @@
-.news-letter-container{
-    margin-top: 100px;
-    font-size: 100px;
-    color: white;
+.news-letter-container {
+  margin: 50px auto;
+  font-size: 100px;
+  color: white;
+}
+.newsletter-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter-heading-div {
+  max-width: 438px;
+}
+.newsletter-heading {
+  font-size: 40px;
+  color: white;
+  font-family: "Archivo Black", sans-serif;
+}
+.newsletter-heading span {
+  color: #e05849;
+}
+.newsletter-input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter-input {
+  background: linear-gradient(91.4deg, #22384f 0%, #4a2c2b 100%);
+  border-radius: 5px 0px 0px 5px !important;
+  outline: none;
+  height: 50px;
+  padding: 15px 10px;
+  width: 250px;
+  color: white;
+  margin: 10px 0;
+  border: none;
+}
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.644);
+}
+.newsletter-btn {
+  font-size: small;
+  text-transform: capitalize !important;
+  margin: 10px 0;
+  background: linear-gradient(97.69deg, #5497f1 0%, #fd6452 100%);
+  border-radius: 0px 5px 5px 0px !important;
+  padding: 12px 30px !important;
+  height: 50px;
+}
+.newsletter-btn .none {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 930px) {
+  .newsletter-heading {
+    font-size: 35px;
+  }
+  .newsletter-input {
+    width: 200px;
+  }
+  .newsletter-btn {
+    padding: 12px 15px !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .newsletter-heading {
+    font-size: 25px;
+  }
+  .newsletter-flex-container {
+    flex-wrap: wrap !important;
+  }
+  .newsletter-heading-div {
+    max-width: inherit !important;
+    width: inherit !important;
+  }
+.newsletter-input-section {
+    margin-top: 20px;
+}
+  .newsletter-input {
+    width: 250px;
+  }
+  .newsletter-btn {
+    padding: 12px 25px !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+    .newsletter-input {
+        width: calc(100vw - 160px);
+      }
+      .newsletter-btn {
+        padding: 12px 15px !important;
+      }
+}
+@media only screen and (max-width: 390px) {
+  .newsletter-heading {
+    font-size: 20px;
+  }
 }

@@ -1,17 +1,29 @@
-import { Grid } from "@mui/material";
+import { Button } from "@mui/material";
 import React from "react";
 import "./news-letter.css";
+
 const Newsletter = () => {
   return (
     <div className="news-letter-container">
-      <Grid>
-        <Grid item >
-          <div className="testimonials-heading">
-            Sign Up for <span>Updates</span> & Newsletter  
+      <div className="newsletter-flex-container">
+        <div className="newsletter-heading-div">
+          <div className="newsletter-heading">
+            Sign Up for <span>Updates</span> & Newsletter
           </div>
-        </Grid>
-        <Grid item ></Grid>
-      </Grid>
+        </div>
+        <div>
+          <div className="newsletter-input-section">
+            <input
+              placeholder="Type your Email"
+              className="newsletter-input"
+              type="email"
+            />
+            <Button sx={{ color: "white" }} className="newsletter-btn">
+              Subscribe<span className="none">-</span>Now
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
