@@ -1,7 +1,7 @@
 import React from "react";
 import "./product-details.css";
-import { FeaturedProductCard } from "../Card/ProductCard";
-import { CustomIconButton } from "../Buttons/MuiIconButtons";
+import { FeaturedProductCard } from "../../components/Card/ProductCard";
+import { CustomIconButton } from "../../components/Buttons/MuiIconButtons";
 import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 const ProductDetails = () => {

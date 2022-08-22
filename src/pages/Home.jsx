@@ -1,19 +1,16 @@
 import React from "react";
-import AboutUs from "../components/AboutUs/AboutUs";
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/Navbar/Navbar";
-import Newsletter from "../components/Newsletter/Newsletter";
-import PopularProducts from "../components/PopularProducts/PopularProducts";
-import Container from "../components/ProductContainer/Container";
-import ProductDetails from "../components/ProductDetails/ProductDetalis";
-import Testimonials from "../components/Testimonials/Testimonials";
+import AboutUs from "../sections/AboutUs/AboutUs";
+import Newsletter from "../sections/Newsletter/Newsletter";
+import PopularProducts from "../sections/PopularProducts/PopularProducts";
+import Container from "../sections/ProductContainer/Container";
+import ProductDetails from "../sections/ProductDetails/ProductDetalis";
+import Testimonials from "../sections/Testimonials/Testimonials";
 import "../index.css";
 
 const Home = () => {
   return (
     <>
       <div className="home">
-        <Navbar />
         <Container />
         <PopularProducts />
         <AboutUs />
@@ -21,7 +18,6 @@ const Home = () => {
       </div>
         <Testimonials />
         <Newsletter />
-        <Footer/>
     </>
   );
 };

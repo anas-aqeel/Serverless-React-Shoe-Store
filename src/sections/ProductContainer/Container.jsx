@@ -1,8 +1,7 @@
-import { Button, Grid } from "@mui/material";
 import React from "react";
 import "./container.css";
+import { Button, Grid, Rating } from "@mui/material";
 import image from "../../assets/images/headerImg.png";
-
 import arrow from "../../assets/images/arrow.png";
 
 const Container = () => {
@@ -21,14 +20,23 @@ const Container = () => {
               <Button className="shopnow_btn">
                 <span>Shop Now</span>
               </Button>
-              <img src={arrow} className='arrow'/>
+              <img src={arrow} className="arrow" />
             </div>
             <div className="rate_container">
               <div className="empty"></div>
               <div className="rating">
-                <span> 4.9</span> | ⭐⭐⭐⭐⭐
+                <span> 4.5</span> |
+                <>
+                  <Rating
+                    sx={{ color: "goldenrod" }}
+                    name="simple-controlled"
+                    value={4.5}
+                    precision={0.5}
+                    onChange={(event, newValue) => {}}
+                  />
+                </>
                 <p>120K Total Reviews</p>
-                </div>
+              </div>
             </div>
           </div>
         </Grid>
@@ -40,7 +48,9 @@ const Container = () => {
             <div></div>
             <div className="morph_box">
               <h6 className="off_heading">Get upto 30% off</h6>
-              <p className="off_tagline">You can get upto 30 percent discount from here</p>
+              <p className="off_tagline">
+                You can get upto 30 percent discount from here
+              </p>
             </div>
           </div>
         </Grid>

@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomIconButton } from "../Buttons/MuiIconButtons";
+import { CustomIconButton } from "../../components/Buttons/MuiIconButtons";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import Card from "@mui/material/Card";
@@ -8,7 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import "./testimonials.css";
-import CustomCarousel from "../Carousel/Carousel";
+import CustomCarousel from "../../components/Carousel/Carousel";
 
 const Testimonials = () => {
   return (

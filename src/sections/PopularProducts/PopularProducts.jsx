@@ -1,11 +1,11 @@
 import React from "react";
-import { CustomIconButton } from "../Buttons/MuiIconButtons";
+import { CustomIconButton } from "../../components/Buttons/MuiIconButtons";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
-import ProductCard from "../Card/ProductCard";
-import "./popular-products.css";
+import ProductCard from "../../components/Card/ProductCard";
 import { Grid } from "@mui/material";
 import { PopularProductsList } from "../../siteConfig";
+import "./popular-products.css";
 const PopularProducts = () => {
   
   return (

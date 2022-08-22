@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   width: 100vw;
-  background: linear-gradient(90deg, #13171C, #1D2328);
+  background: linear-gradient(90deg, #13171c, #1d2328);
   display: flex;
   justify-content: center;
 }
@@ -17,23 +17,26 @@ body {
 }
 
 .home,
+.navbar,
+.cart,
 .testimonials-wrapper,
 .news-letter-wrapper,
 .footer-wrapper {
   justify-self: center;
   justify-content: center;
   align-items: center;
-  max-width: min(var(--container-width), calc(100vw - 250px));
+  width: min(var(--container-width), calc(100vw - 250px)) !important;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 850px) {
-
   .home,
+  .cart,
+  .navbar,
   .testimonials-wrapper,
   .news-letter-wrapper,
   .footer-wrapper {
-    max-width: min(var(--container-width), calc(100vw - 150px));
+    width: min(var(--container-width), calc(100vw - 150px)) !important;
   }
 }
 
@@ -43,19 +46,22 @@ body {
   }
 
   .home,
+  .cart,
+  .navbar,
   .testimonials-wrapper,
   .news-letter-wrapper,
   .footer-wrapper {
-    max-width: min(var(--container-width), calc(100vw - 50px));
+    width: min(var(--container-width), calc(100vw - 50px)) !important;
   }
 }
 
 @media only screen and (max-width: 450px) {
-
   .home,
+  .cart,
+  .navbar,
   .testimonials-wrapper,
   .news-letter-wrapper,
   .footer-wrapper {
-    max-width: min(var(--container-width), calc(100vw - 40px));
+    width: min(var(--container-width), calc(100vw - 40px)) !important;
   }
 }
