@@ -135,7 +135,7 @@
     display: none;
   }
   .container {
-    background-image: url("../../assets/images/home.png");
+    background-image: url("../../assets/images/headerImg.png");
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: bottom;

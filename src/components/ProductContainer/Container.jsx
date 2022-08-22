@@ -1,7 +1,8 @@
 import { Button, Grid } from "@mui/material";
 import React from "react";
 import "./container.css";
-import image from "../../assets/images/home1.png";
+import image from "../../assets/images/headerImg.png";
+
 import arrow from "../../assets/images/arrow.png";
 
 const Container = () => {
