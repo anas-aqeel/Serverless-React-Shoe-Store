@@ -5,8 +5,9 @@ import EastIcon from "@mui/icons-material/East";
 import ProductCard from "../Card/ProductCard";
 import "./popular-products.css";
 import { Grid } from "@mui/material";
-
+import { PopularProductsList } from "../../siteConfig";
 const PopularProducts = () => {
+  
   return (
     <div className="main">
       <div className="popular-products-head">
@@ -38,31 +39,14 @@ const PopularProducts = () => {
         justifyContent="center"
         spacing={3}
       >
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-        <Grid item lg={3} md={4} sm={6}>
-          <ProductCard />
-        </Grid>
-      </Grid>
+        {PopularProductsList.map((e)=>{
+          return(
+            <Grid item lg={3} md={4} sm={6}>
+              <ProductCard data={e} />
+            </Grid>
+           );
+          })}
+          </Grid>
     </div>
   );
 };

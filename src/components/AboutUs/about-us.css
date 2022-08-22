@@ -24,8 +24,8 @@
   background: linear-gradient(180deg, #7F249A 39.58%, #253DAB 100%);
 }
 .about-us-1-img {
-  height: 360px;
-  width: 500px;
+  height: 680px;
+  width: 700px;
   z-index: 2;
   rotate: 18deg;
 }
@@ -73,8 +73,10 @@
     font-size: 51px;
   }
   .about-us-1-img {
-    height: 200px;
-    width: 350px;
+    /* height: 300px;
+    width: 350px; */
+    height: 480px;
+    width: 500px;
   }
 
 
@@ -102,13 +104,13 @@
 }
 @media only screen and (max-width: 500px) {
     .about-us-1-img {
-        height: 200px;
+        height: 300px;
         width: 330px;
     }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 350px) {
     .about-us-1-img {
-        height: 170px;
+        height: 250px;
         width: 280px;
     }
     

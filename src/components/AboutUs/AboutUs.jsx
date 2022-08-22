@@ -1,6 +1,6 @@
 import React from "react";
 import "./about-us.css";
-import image from "../../assets/images/home.png";
+import image from "../../assets/images/aboutUs.png";
 import { Button, Grid } from "@mui/material";
 const AboutUs = () => {
   return (
