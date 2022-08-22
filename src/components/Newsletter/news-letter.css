@@ -1,5 +1,9 @@
-.news-letter-container {
-  margin: 50px auto;
+.news-letter-container{
+  background-color: #0E0F0A;
+  padding: 30px 0;
+}
+.news-letter-wrapper {
+  margin: 30px auto;
   font-size: 100px;
   color: white;
 }

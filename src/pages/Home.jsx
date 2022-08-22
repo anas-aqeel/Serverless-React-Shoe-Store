@@ -1,5 +1,6 @@
 import React from "react";
 import AboutUs from "../components/AboutUs/AboutUs";
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Newsletter from "../components/Newsletter/Newsletter";
 import PopularProducts from "../components/PopularProducts/PopularProducts";
@@ -19,9 +20,8 @@ const Home = () => {
         <ProductDetails />
       </div>
         <Testimonials />
-      <div className="home">
         <Newsletter />
-      </div>
+        <Footer/>
     </>
   );
 };

@@ -27,7 +27,7 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <Container maxWidth="xl" style={{padding: 0}}>
+      <Container maxWidth="xl" style={{ padding: 0 }}>
         <Toolbar
           style={{
             display: "flex",
@@ -44,18 +44,9 @@ const Navbar = () => {
             {logoTxt[0]}
             <span>{logoTxt[1]}</span>
           </Typography>
-          <Typography
-            className="logo"
-            variant="h6"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              fontSize: { xs: "20px" },
-            }}
-          >
-            {logoTxt[0]}
-            <span>{logoTxt[1]}</span>
-          </Typography>
+          <Box sx={{ display: { xs: "flex", md: "none" }}}>
+          <Logo text={logoTxt}/>
+          </Box>
           <Box
             sx={{
               flexGrow: 1,
@@ -69,7 +60,7 @@ const Navbar = () => {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  sx={{px:2, my: 0, color: "inherit", display: "block" }}
+                  sx={{ px: 2, my: 0, color: "inherit", display: "block" }}
                 >
                   <Typography variant="body2" textTransform={"capitalize"}>
                     {page}
@@ -129,4 +120,19 @@ const Navbar = () => {
     </div>
   );
 };
+export const Logo = ({text}) => {
+  return (
+    <Typography
+      className="logo"
+      variant="h6"
+      sx={{
+        mr: 2,
+        fontSize: { xs: "20px" },
+      }}
+    >
+      {text[0]}
+      <span>{text[1]}</span>
+    </Typography>
+  )
+}
 export default Navbar;
