@@ -16,7 +16,7 @@ export default function ProductCard() {
     <Card
       elevation={0}
       sx={{
-        mb: 2,
+        mx:1,
         padding: "1px",
         borderRadius: "10px",
         background: "linear-gradient(180deg, #7F249A 39.58%, #253DAB 100%)",
@@ -103,7 +103,7 @@ export function FeaturedProductCard({ className }) {
             justifyContent: 'center',
 
           }}>
-          <img src={featuredImage} className='featured-product' height={'auto'} alt="Featured Image" />
+          <img src={featuredImage} className='featured-product' height={'auto'} alt="Featured" />
         </div>
         <CardActions
           className="featured-product"
