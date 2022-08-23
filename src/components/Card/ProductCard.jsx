@@ -11,7 +11,7 @@ import "./card.css";
 import { CustomIconButton } from "../Buttons/MuiIconButtons";
 
 
-export default function ProductCard({ data: { image, name, rating, price } }) {
+export default function ProductCard({ data: { image, name, rating, price }, style }) {
   return (
     <Card
       elevation={0}
@@ -24,6 +24,7 @@ export default function ProductCard({ data: { image, name, rating, price } }) {
     >
       <div
         style={{
+          ...style,
           borderRadius: "10px",
           paddingBottom: '10px',
           background: "linear-gradient(90deg, #13171C, #1D2328 )",

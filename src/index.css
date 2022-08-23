@@ -17,6 +17,7 @@ body {
 }
 
 .home,
+.cart,
 .navbar,
 .products,
 .testimonials-wrapper,
@@ -31,6 +32,7 @@ body {
 
 @media only screen and (max-width: 850px) {
   .home,
+  .cart,
   .products,
   .navbar,
   .testimonials-wrapper,
@@ -46,6 +48,7 @@ body {
   }
 
   .home,
+  .cart,
   .products,
   .navbar,
   .testimonials-wrapper,
@@ -57,6 +60,7 @@ body {
 
 @media only screen and (max-width: 450px) {
   .home,
+  .cart,
   .products,
   .navbar,
   .testimonials-wrapper,

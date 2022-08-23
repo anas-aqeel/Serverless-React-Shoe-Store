@@ -48,6 +48,7 @@ const products = [...Array(24)].map((_, index) => {
   return {
     id: faker.datatype.uuid(),
     cover: `/static/mock-images/products/product_${setIndex}.jpg`,
+    image: `/static/mock-images/products/product_${setIndex}.jpg`,
     name: PRODUCT_NAME[index],
     price: faker.datatype.number({ min: 4, max: 99, precision: 0.01 }),
     priceSale:
