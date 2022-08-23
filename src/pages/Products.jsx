@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import Page from "../components/Template/Wrapper/Page";
 import {
   ProductSort,
@@ -21,8 +21,8 @@ export default function EcommerceShop() {
   };
 
   return (
-    <Page title="Dashboard: Products">
-      <Container sx={{mb:5}}>
+    <Page className='products' title="Dashboard: Products">
+      <Box sx={{mb:5, px:0}}>
         <Typography variant="h4" sx={{ my: 4,color:'white' }}>
           Products
         </Typography>
@@ -46,7 +46,7 @@ export default function EcommerceShop() {
 
         <ProductList products={PRODUCTS} />
         <ProductCartWidget />
-      </Container>
+      </Box>
     </Page>
   );
 }

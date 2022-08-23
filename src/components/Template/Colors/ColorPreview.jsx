@@ -37,7 +37,7 @@ export default function ColorPreview({ colors, limit = 3, ...other }) {
       ))}
 
       {colors.length > limit && (
-        <Typography variant="subtitle2">{`+${moreColor}`}</Typography>
+        <Typography sx={{color:'#D1D1D1'}} variant="subtitle2">{`+${moreColor}`}</Typography>
       )}
     </RootStyle>
   );
