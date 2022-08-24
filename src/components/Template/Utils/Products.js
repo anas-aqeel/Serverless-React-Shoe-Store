@@ -1,7 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { sample } from "lodash";
 
-// ----------------------------------------------------------------------
 
 const PRODUCT_NAME = [
   "Nike Air Force 1 NDESTRUKT",
@@ -63,7 +61,7 @@ const products = [...Array(24)].map((_, index) => {
       (setIndex === 23 && PRODUCT_COLOR.slice(4, 6)) ||
       (setIndex === 24 && PRODUCT_COLOR.slice(5, 6)) ||
       PRODUCT_COLOR,
-    status: sample(["sale", "new", "", ""]),
+    status: ["sale", "new", "", ""][faker.datatype.number({ min: 0, max: 3, precision: 1 })],
   };
 });
 

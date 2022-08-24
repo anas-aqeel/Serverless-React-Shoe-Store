@@ -1,11 +1,11 @@
 import React from 'react'
-import Carts from '../sections/Cart/Cart'
+import CartContainer from '../sections/CartContainer/CartContainer'
 import products from './../components/Template/Utils/Products'
 
 const Cart = () => {
   return (
-    <div style={{height:'60vh'}}>
-      <Carts bgimage={[...products.slice(0,3)]} count={34}/>
+    <div style={{minHeight:'60vh'}}>
+      <CartContainer bgimage={[...products.slice(0,5)]} count={0}/>
     </div>
   )
 }

@@ -1,8 +1,6 @@
-import PropTypes from "prop-types";
 import { alpha, styled } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
 
-// ----------------------------------------------------------------------
 
 const RootStyle = styled(Box)({
   display: "flex",
@@ -19,12 +17,6 @@ const IconStyle = styled("div")(({ theme }) => ({
   boxShadow: `inset -1px 1px 2px ${alpha(theme.palette.common.black, 0.24)}`,
 }));
 
-// ----------------------------------------------------------------------
-
-ColorPreview.propTypes = {
-  colors: PropTypes.array.isRequired,
-  limit: PropTypes.number,
-};
 
 export default function ColorPreview({ colors, limit = 3, ...other }) {
   const showColor = colors.slice(0, limit);
