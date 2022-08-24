@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
 import React from "react";
+import WestIcon from "@mui/icons-material/West";
 import "./cart-container.css";
 
 export const CartContainer = ({ bgimage, count }) => {
   return (
     <div className="cart-card">
-      <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <h3>Cart</h3>
         <h3>{bgimage.length} items</h3>
       </div>
@@ -25,7 +26,10 @@ export const CartContainer = ({ bgimage, count }) => {
                 </div>
               </div>
             ))}
-            <Button className="cart-checkout-btn"> Checkout</Button>
+            <Button className="continue-btn" startIcon={<WestIcon/>}>Continue Shopping</Button>
+            <hr />
+
+            <Button className="cart-checkout-btn" > Checkout</Button>
           </div>
         ) : (
           <p className="p-empty">Your cart is empty</p>

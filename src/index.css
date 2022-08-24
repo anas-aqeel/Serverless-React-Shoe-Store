@@ -17,6 +17,7 @@ body {
 }
 
 .home,
+.site-container,
 .cart,
 .navbar,
 .products,
@@ -32,6 +33,7 @@ body {
 
 @media only screen and (max-width: 850px) {
   .home,
+  .site-container,
   .cart,
   .products,
   .navbar,
@@ -48,6 +50,7 @@ body {
   }
 
   .home,
+  .site-container,
   .cart,
   .products,
   .navbar,
@@ -60,6 +63,7 @@ body {
 
 @media only screen and (max-width: 450px) {
   .home,
+  .site-container,
   .cart,
   .products,
   .navbar,

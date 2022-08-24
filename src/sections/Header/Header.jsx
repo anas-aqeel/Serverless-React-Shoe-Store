@@ -1,10 +1,10 @@
 import React from "react";
-import "./container.css";
+import "./header.css";
 import { Button, Grid, Rating } from "@mui/material";
 import image from "../../assets/images/headerImg.png";
 import arrow from "../../assets/images/arrow.png";
 
-const Container = () => {
+const Header = () => {
   return (
     <div className="container">
       <Grid className="container_grid" container spacing={1}>
@@ -59,4 +59,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default Header;

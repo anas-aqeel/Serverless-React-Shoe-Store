@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Page from "../components/Template/Wrapper/Page";
 import {
   ProductSort,
@@ -22,8 +22,8 @@ export default function EcommerceShop() {
 
   return (
     <Page className='products' title="Dashboard: Products">
-      <Box sx={{mb:5, px:0}}>
-        <Typography variant="h4" sx={{ my: 4,color:'white' }}>
+      <Box sx={{ mb: 5, px: 0 }}>
+        <Typography variant="h4" sx={{ my: 4, color: 'white' }}>
           Products
         </Typography>
 
@@ -34,7 +34,7 @@ export default function EcommerceShop() {
           justifyContent="flex-end"
           sx={{ mb: 5 }}
         >
-          <Stack direction="row" spacing={1}  flexShrink={0} sx={{ my: 1 }}>
+          <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
             <ProductFilterSidebar
               isOpenFilter={openFilter}
               onOpenFilter={handleOpenFilter}

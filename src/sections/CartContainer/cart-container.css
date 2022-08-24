@@ -89,3 +89,7 @@
     padding-inline: 2em;
   }
 }
+.continue-btn{
+  color: orangered !important;
+  width: 200px;
+}
