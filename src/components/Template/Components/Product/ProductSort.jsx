@@ -24,7 +24,8 @@ export default function ShopProductSort() {
       <Button
         color="inherit"
         sx={{
-          color: "white" }}
+          color: "white"
+        }}
         disableRipple
         onClick={handleOpen}
         endIcon={<Iconify icon={open ? 'eva:chevron-up-fill' : 'eva:chevron-down-fill'} />}

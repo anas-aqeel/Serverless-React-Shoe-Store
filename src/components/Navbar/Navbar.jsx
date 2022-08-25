@@ -8,9 +8,10 @@ import {
   Button,
   MenuItem,
 } from "@mui/material";
+import { MuiRouteLink } from "../Buttons/MuiIconButtons";
+import "./navbar.css";
 import { NavConfig } from "../../siteConfig";
 import { CustomIconButton } from "../Buttons/MuiIconButtons";
-import "./navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchField from "../Search/Search";
@@ -36,16 +37,18 @@ const Navbar = () => {
           }}
           disableGutters
         >
-          <Typography
-            className="logo"
-            variant="h5"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          >
-            {logoTxt[0]}
-            <span>{logoTxt[1]}</span>
+          <Typography className="logo" variant="h5" sx={{ mr: 2, textDecoration: 'none', display: { xs: "none", md: "flex" } }}>
+            <MuiRouteLink route={''} color='white'>
+             <Logo text={logoTxt}/>
+            </MuiRouteLink>
           </Typography>
-          <Box sx={{ display: { xs: "flex", md: "none" }}}>
-          <Logo text={logoTxt}/>
+
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+
+            <MuiRouteLink route={''} color='white'>
+              <Logo text={logoTxt} />
+            </MuiRouteLink>
+
           </Box>
           <Box
             sx={{
@@ -58,21 +61,31 @@ const Navbar = () => {
               sx={{ display: "flex", flexGrow: 1, justifyContent: "center" }}
             >
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  sx={{ px: 2, my: 0, color: "inherit", display: "block" }}
-                >
-                  <Typography variant="body2" textTransform={"capitalize"}>
-                    {page}
-                  </Typography>
-                </Button>
+                <MuiRouteLink route={page} color='white'>
+                  <Button
+                    key={page}
+                    sx={{
+                      px: 2,
+                      my: 0,
+                      color: "white",
+                      textDecoration: "none",
+                      display: "block",
+                    }}
+                  >
+                    <Typography variant="body2" textTransform={"capitalize"}>
+                      {page}
+                    </Typography>
+                  </Button>
+                </MuiRouteLink>
               ))}
             </Box>
             <Box sx={{ display: "flex" }}>
               <SearchField bgColor="#17191cd1" color="inherit" />
-              <CustomIconButton>
-                <ShoppingCartOutlinedIcon />{" "}
-              </CustomIconButton>
+              <MuiRouteLink route={'cart'} color='white'>
+                <CustomIconButton>
+                  <ShoppingCartOutlinedIcon sx={{ color: 'white' }}/>
+                </CustomIconButton>
+              </MuiRouteLink>
             </Box>
           </Box>
 
@@ -80,14 +93,16 @@ const Navbar = () => {
             sx={{ alignItems: "center", display: { xs: "flex", md: "none" } }}
           >
             <SearchField bgColor="#1416187d" color="inherit" />
-            <CustomIconButton>
-              {" "}
-              <ShoppingCartOutlinedIcon />{" "}
-            </CustomIconButton>
+            <MuiRouteLink route={'cart'} color='white'>
+              <CustomIconButton>
+                <ShoppingCartOutlinedIcon sx={{ color: 'white' }} />
+              </CustomIconButton>
+            </MuiRouteLink>
+
             <CustomIconButton onClick={handleOpenNavMenu}>
-              {" "}
-              <MenuIcon />{" "}
+              <MenuIcon />
             </CustomIconButton>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -107,11 +122,14 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography fontStyle={"normal"} textAlign="center">
-                    {page}
-                  </Typography>
-                </MenuItem>
+                <MuiRouteLink route={page} color='black'>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography fontStyle={"normal"} textAlign="center">
+                      {page}
+                    </Typography>
+                  </MenuItem>
+                </MuiRouteLink>
+
               ))}
             </Menu>
           </Box>
@@ -120,7 +138,7 @@ const Navbar = () => {
     </div>
   );
 };
-export const Logo = ({text}) => {
+export const Logo = ({ text }) => {
   return (
     <Typography
       className="logo"
@@ -133,6 +151,6 @@ export const Logo = ({text}) => {
       {text[0]}
       <span>{text[1]}</span>
     </Typography>
-  )
-}
+  );
+};
 export default Navbar;

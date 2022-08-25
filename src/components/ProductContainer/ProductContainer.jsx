@@ -8,7 +8,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 const ProductContainer = () => {
   return (
     <Grid
-        columnGap={2}
+      columnGap={2}
       container
       direction="row"
       alignItems="center"
@@ -36,7 +36,7 @@ const ProductContainer = () => {
             name="simple-controlled"
             value={5}
             precision={0.5}
-            onChange={(event, newValue) => {}}
+            onChange={(event, newValue) => { }}
           />
           <span style={{ color: "goldenrod", marginLeft: "5px" }}>(5.0)</span>
         </div>
@@ -67,11 +67,11 @@ const ProductContainer = () => {
           <Button
             sx={{ minWidth: "30px" }}
             variant="outlined"
-            color="error"
+            color="success"
             aria-label="delete"
             size="small"
           >
-            <AddIcon />
+            <RemoveIcon />
           </Button>
           <Button
             disabled
@@ -89,11 +89,11 @@ const ProductContainer = () => {
           <Button
             sx={{ minWidth: "30px" }}
             variant="outlined"
-            color="success"
+            color="error"
             aria-label="delete"
             size="small"
           >
-            <RemoveIcon />
+            <AddIcon />
           </Button>
         </div>
         <Button

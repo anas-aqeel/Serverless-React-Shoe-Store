@@ -1,8 +1,9 @@
 import { IconButton } from '@mui/material'
+import { Link } from 'react-router-dom'
 import React from 'react'
 import './buttons.css'
 
-export const CustomIconButton = ({children, style, onClick, className}) => {
+export const CustomIconButton = ({ children, style, onClick, className }) => {
     return (
         <IconButton
             className={className}
@@ -22,6 +23,20 @@ export const CustomIconButton = ({children, style, onClick, className}) => {
         >
             {children}
         </IconButton>
+    )
+}
+export const MuiRouteLink = ({ route, color, children,style }) => {
+    return (
+        <Link
+
+            to={route}
+            style={{
+                textDecoration: 'none',
+                color: `${color} !important`,
+                ...style
+            }}>
+            {children}
+        </Link>
     )
 }
 

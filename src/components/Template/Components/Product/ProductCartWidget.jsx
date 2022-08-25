@@ -1,6 +1,7 @@
 import { styled } from '@mui/material/styles';
 import { Badge } from '@mui/material';
 import Iconify from '../../Iconify';
+import { MuiRouteLink } from '../../../Buttons/MuiIconButtons'
 
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -26,10 +27,13 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function CartWidget() {
   return (
+    <MuiRouteLink route={'/cart'}>
     <RootStyle>
       <Badge showZero badgeContent={0} color="error" max={99}>
         <Iconify icon="eva:shopping-cart-fill" width={24} height={24} />
       </Badge>
     </RootStyle>
+
+    </MuiRouteLink>
   );
 }

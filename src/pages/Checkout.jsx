@@ -1,11 +1,12 @@
 import React from "react";
-import AddToCart from "../sections/Checkout/Checkout";
+import CheckoutSection from "../sections/Checkout/Checkout";
 import "../index.css";
+
 const Checkout = () => {
   return (
     <>
       <div className="">
-        <AddToCart/>
+        <CheckoutSection/>
       </div>
     </>
   );
