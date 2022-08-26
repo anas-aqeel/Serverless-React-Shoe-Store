@@ -1,19 +1,25 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import reducer from './AppReducer.js'
-
-
 
 let initialState = {
     popularProducts: [],
     products: [],
     cart: []
 }
-
 export let MY_CONTEXT = createContext(initialState);
 
 
-const GlobalContext = ({children}) => {
+const GlobalContext = ({ children }) => {
     let [state, dispatch] = useReducer([reducer, initialState]);
+    useEffect(() => {
+        let fetchData = async () => {
+            let data = await fetch('http://localhost:9000/index');
+            let dataJson = await data.json();
+            dataJson = dataJson.data;
+        }
+        fetchData();
+    }, [])
+
     return (
         <MY_CONTEXT.Provider value={{ state, dispatch }}>
             {children}

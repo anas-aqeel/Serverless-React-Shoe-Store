@@ -15,6 +15,9 @@ export default function ProductCard({ data: { image, name, rating, price }, styl
   return (
     <Card
       elevation={0}
+      style={{
+        width: '100%',
+      }}
       sx={{
         mx: 1,
         padding: "1px",
@@ -24,6 +27,7 @@ export default function ProductCard({ data: { image, name, rating, price }, styl
     >
       <div
         style={{
+        width: '100%',
           ...style,
           borderRadius: "10px",
           paddingBottom: '10px',
