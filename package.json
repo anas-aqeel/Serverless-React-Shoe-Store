@@ -30,11 +30,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start", 
     "lambda-serve": "netlify-lambda serve lambda-src",
     "lambda-build": "netlify-lambda build lambda-src",
-    "build": "NODE_ENV=production webpack && npm run lambda-build",
+    "build": "react-scripts build && npm run lambda-build",
     "dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base src/\" \"npm run lambda-serve\"",
+    "start": "react-scripts start",
     
     "test": "react-scripts test",
     "eject": "react-scripts eject"
