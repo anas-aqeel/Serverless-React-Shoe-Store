@@ -25,12 +25,17 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "simplebar-react": "^2.4.1",
+    "stripe": "^9.16.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start", 
+    "lambda-serve": "netlify-lambda serve lambda-src",
+    "lambda-build": "netlify-lambda build lambda-src",
+    "build": "NODE_ENV=production webpack && npm run lambda-build",
+    "dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base src/\" \"npm run lambda-serve\"",
+    
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,5 +56,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "dotenv": "^16.0.1",
+    "netlify-lambda": "^2.0.15"
   }
 }
