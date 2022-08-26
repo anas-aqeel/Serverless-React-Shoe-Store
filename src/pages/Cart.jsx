@@ -1,6 +1,6 @@
 import React from 'react'
 import CartContainer from '../sections/CartContainer/CartContainer'
-import products from './../components/Template/Utils/Products'
+import {products} from '../siteConfig'
 
 const Cart = () => {
   return (

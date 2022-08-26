@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Page from "../components/Template/Wrapper/Page";
 import {
@@ -7,7 +7,10 @@ import {
   ProductCartWidget,
   ProductFilterSidebar,
 } from "../components/Template/Components/Product/Products";
-import PRODUCTS from "../components/Template/Utils/Products";
+import {products} from "../siteConfig";
+
+
+
 
 export default function EcommerceShop() {
   const [openFilter, setOpenFilter] = useState(false);
@@ -19,6 +22,7 @@ export default function EcommerceShop() {
   const handleCloseFilter = () => {
     setOpenFilter(false);
   };
+
 
   return (
     <Page className='products' title="Dashboard: Products">
@@ -44,7 +48,7 @@ export default function EcommerceShop() {
           </Stack>
         </Stack>
 
-        <ProductList products={PRODUCTS} />
+        <ProductList products={products} />
         <ProductCartWidget />
       </Box>
     </Page>

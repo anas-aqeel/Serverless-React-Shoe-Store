@@ -19,6 +19,7 @@ const IconStyle = styled("div")(({ theme }) => ({
 
 
 export default function ColorPreview({ colors, limit = 3, ...other }) {
+  
   const showColor = colors.slice(0, limit);
   const moreColor = colors.length - limit;
 

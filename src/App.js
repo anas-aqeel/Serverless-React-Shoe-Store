@@ -7,11 +7,13 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import StripePage from "./pages/StripePage";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <StripePage/>
+      {/* <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,7 +25,7 @@ const App = () => {
           <Route path="/product/:id" element={<Product />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 };

@@ -56,6 +56,7 @@ export default function ShopProductCard({ product }) {
           alignItems="center"
           justifyContent="space-between"
         >
+         
           <ColorPreview colors={colors} />
           <Typography sx={{ color: "#D1D1D1" }} variant="subtitle1">
             <Typography

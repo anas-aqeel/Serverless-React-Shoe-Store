@@ -1,4 +1,3 @@
-import { replace } from 'lodash';
 import numeral from 'numeral';
 
 

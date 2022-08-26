@@ -32,9 +32,10 @@ export default function ProductCard({ data: { image, name, rating, price }, styl
       >
         <CardMedia
           sx={{
-            p: 3,
-            borderRadius: '10px',
-            maxWidth: "350px",
+            // p: 3,
+            borderRadius: '10px 10px 0 0 ',
+            width: "100%",
+            height: "250px",
             background: "linear-gradient(149.79deg, #1C2A37 1%, #3E2018 100%)",
           }}
           component="img"
