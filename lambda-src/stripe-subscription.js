@@ -33,21 +33,12 @@
 //   }
 // }
 
-// const createCustomerAndSubscribeToPlan = async function (stripeToken, email, productPlan) {
-//   // create a customer
-//   const customer = await stripe.customers.create({
-//     email,
-//     source: stripeToken,
-//   })
-//   // retrieve created customer id to add customer to subscription plan
-//   const customerId = customer.id
-//   // create a subscription for the newly created customer
-//   const subscription = await stripe.subscriptions.create({
-//     customer: customerId,
-//     items: [{ plan: productPlan }],
-//   })
-//   return subscription
-// }
+const getAllProductDetails = async function () {
+  // get all products
+  const products = await stripe.products.list();
+  // const response = await products.json();
+  return products
+}
 
 // module.exports = { handler }
 
@@ -55,16 +46,23 @@ require("dotenv").config();
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const statusCode = 200;
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
+// exports.handler = async function (event) {
+ 
+//   console.log(data);
+//   return true;
+// };
 
-exports.handler = function(event, context, callback) {
-  return callback(null, {
+
+exports.handler = async function() {
+  const statusCode = 200;
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+  const data = await getAllProductDetails();
+  return  {
     statusCode,
     headers,
-    body: 'Let there be light!'
-  });
+    body: JSON.stringify(data)
+  };
 }
