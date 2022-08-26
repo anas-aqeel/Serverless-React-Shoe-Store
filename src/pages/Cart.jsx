@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import CartContainer from '../sections/CartContainer/CartContainer'
-import {products} from '../siteConfig'
+import { MY_CONTEXT } from '../context/GlobalContext'
 
 const Cart = () => {
+  let {state : {cart}} = useContext(MY_CONTEXT);
   return (
-    <div style={{minHeight:'60vh'}}>
-      <CartContainer bgimage={[...products.slice(0,5)]} count={0}/>
+
+    <div style={{ minHeight: '60vh' }}>
+      <CartContainer data={cart} />
     </div>
   )
 }

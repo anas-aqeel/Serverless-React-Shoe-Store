@@ -10,10 +10,10 @@ export let MY_CONTEXT = createContext(initialState);
 
 
 const GlobalContext = ({ children }) => {
-    let [state, dispatch] = useReducer([reducer, initialState]);
+    let [state, dispatch] = useReducer(reducer, initialState);
     useEffect(() => {
         let fetchData = async () => {
-            let data = await fetch('http://localhost:9000/index');
+            let data = await fetch('https://ndure.netlify.app/.netlify/functions/index');
             let dataJson = await data.json();
             dataJson = dataJson.data;
         }

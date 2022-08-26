@@ -4,24 +4,24 @@ import WestIcon from "@mui/icons-material/West";
 import { MuiRouteLink } from "../../components/Buttons/MuiIconButtons";
 import "./cart-container.css";
 
-export const CartContainer = ({ bgimage, count }) => {
+export const CartContainer = ({ data }) => {
   return (
     <div className="cart-card">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h3>Cart</h3>
-        <h3>{bgimage.length} items</h3>
+        <h3>{data.length} items</h3>
       </div>
       <hr />
       <div>
-        {bgimage.length > 0 ? (
+        {data.length > 0 ? (
           <div className="ctcheck">
-            {bgimage.map(({ image, id }) => (
-              <div className="ctinfo-flex" key={id}>
-                <img src={image} key={id} alt="bg-img" />
+            {data?.map((product) => (
+              <div className="ctinfo-flex" key={product.id}>
+                <img src={product.image} key={product.id} alt={product.name} />
                 <div>
-                  <p>Fall Limited Edition Sneakers</p>
+                  <p>{product.name}</p>
                   <p>
-                    $125 x {count} <span>${125 * count}</span>
+                    ${product.price} x {product.quantity} <span>${product.price * product.quantity}</span>
                   </p>
                 </div>
               </div>
@@ -43,7 +43,17 @@ export const CartContainer = ({ bgimage, count }) => {
             </MuiRouteLink>
           </div>
         ) : (
-          <p className="p-empty">Your cart is empty</p>
+          <>
+            <p className="p-empty">Your cart is empty</p>
+            <hr />
+
+            <MuiRouteLink route={'/products'} color='white'>
+              <Button className="continue-btn" startIcon={<WestIcon />}>
+                Continue Shopping
+              </Button>
+            </MuiRouteLink>
+          </>
+
         )}
       </div>
     </div>

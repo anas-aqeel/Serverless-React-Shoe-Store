@@ -65,6 +65,7 @@
 
 .p-empty {
   text-align: center;
+  margin: 20vh auto;
 }
 
 .cart-checkout-btn {
@@ -89,7 +90,7 @@
     padding-inline: 2em;
   }
 }
-.continue-btn{
+.continue-btn {
   color: orangered !important;
   width: 200px;
 }
