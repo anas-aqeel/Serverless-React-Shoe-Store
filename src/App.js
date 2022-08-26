@@ -12,8 +12,8 @@ import StripePage from "./pages/StripePage";
 const App = () => {
   return (
     <>
-      <StripePage/>
-      {/* <BrowserRouter>
+      {/* <StripePage/> */}
+      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/product/:id" element={<Product />} />
         </Routes>
         <Footer />
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 };
