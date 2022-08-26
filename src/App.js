@@ -7,12 +7,11 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import StripePage from "./pages/StripePage";
+import GlobalContext from "./context/GlobalContext";
 
 const App = () => {
   return (
-    <>
-      {/* <StripePage/> */}
+    <GlobalContext>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -26,7 +25,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </GlobalContext>
   );
 };
 

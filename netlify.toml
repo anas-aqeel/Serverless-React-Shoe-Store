@@ -1,0 +1,5 @@
+# netlify.toml
+[build]
+  command = "CI=false npm run build"
+  publish = "src"
+  functions = "lambda"

@@ -30,7 +30,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "lambda-serve": "netlify-lambda serve lambda-src",
+    "lambda-serve": "netlify-lambda serve netlify/functions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
