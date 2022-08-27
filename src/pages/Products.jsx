@@ -7,7 +7,6 @@ import {
   ProductCartWidget,
   ProductFilterSidebar,
 } from "../components/Template/Components/Product/Products";
-import {products} from "../siteConfig";
 
 
 
@@ -48,7 +47,7 @@ export default function EcommerceShop() {
           </Stack>
         </Stack>
 
-        <ProductList products={products} />
+        <ProductList />
         <ProductCartWidget />
       </Box>
     </Page>

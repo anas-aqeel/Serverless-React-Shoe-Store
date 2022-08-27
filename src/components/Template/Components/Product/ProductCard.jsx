@@ -15,8 +15,9 @@ const ProductImgStyle = styled("img")({
 
 
 export default function ShopProductCard({ product }) {
-  const { name, cover, price, colors, status, priceSale } = product;
-
+  
+  const { name, images } = product;
+  let status = 'new';
   return (
     <Card
       sx={{
@@ -41,7 +42,7 @@ export default function ShopProductCard({ product }) {
             {status}
           </Label>
         )}
-        <ProductImgStyle alt={name} src={cover} />
+        <ProductImgStyle alt={name} src={images[0]} />
       </Box>
 
       <Stack spacing={2} sx={{ p: 3 }}>
@@ -57,7 +58,7 @@ export default function ShopProductCard({ product }) {
           justifyContent="space-between"
         >
          
-          <ColorPreview colors={colors} />
+          <ColorPreview colors={['red','red']} />
           <Typography sx={{ color: "#D1D1D1" }} variant="subtitle1">
             <Typography
               component="span"
@@ -67,10 +68,11 @@ export default function ShopProductCard({ product }) {
                 textDecoration: "line-through",
               }}
             >
-              {priceSale && fCurrency(priceSale)}
+              150$
             </Typography>
             &nbsp;
-            {fCurrency(price)}
+            
+              120$
           </Typography>
         </Stack>
       </Stack>

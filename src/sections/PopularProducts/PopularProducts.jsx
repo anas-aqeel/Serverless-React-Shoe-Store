@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CustomIconButton } from "../../components/Buttons/MuiIconButtons";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import ProductCard from "../../components/Card/ProductCard";
 import { Grid } from "@mui/material";
-import { PopularProductsList } from "../../siteConfig";
 import "./popular-products.css";
+import { MY_CONTEXT } from "../../context/GlobalContext";
 const PopularProducts = () => {
-  
+  let { state: { popularProducts } } = useContext(MY_CONTEXT);
   return (
     <div className="main">
       <div className="popular-products-head">
@@ -39,14 +39,14 @@ const PopularProducts = () => {
         justifyContent="center"
         spacing={3}
       >
-        {PopularProductsList.map((e)=>{
-          return(
+        {popularProducts.map((e) => {
+          return (
             <Grid item lg={3} md={4} sm={6}>
               <ProductCard data={e} />
             </Grid>
-           );
-          })}
-          </Grid>
+          );
+        })}
+      </Grid>
     </div>
   );
 };

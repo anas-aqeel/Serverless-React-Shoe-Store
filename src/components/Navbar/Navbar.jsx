@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Toolbar,
@@ -15,8 +15,13 @@ import { CustomIconButton } from "../Buttons/MuiIconButtons";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchField from "../Search/Search";
+import Badge from "@mui/material/Badge";
+import { MY_CONTEXT } from "../../context/GlobalContext";
 
 const Navbar = () => {
+  let {
+    state: { cartLength },
+  } = useContext(MY_CONTEXT);
   let pages = NavConfig.pages;
   let logoTxt = NavConfig.logo;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,18 +42,24 @@ const Navbar = () => {
           }}
           disableGutters
         >
-          <Typography className="logo" variant="h5" sx={{ mr: 2, textDecoration: 'none', display: { xs: "none", md: "flex" } }}>
-            <MuiRouteLink route={''} color='white'>
-             <Logo text={logoTxt}/>
+          <Typography
+            className="logo"
+            variant="h5"
+            sx={{
+              mr: 2,
+              textDecoration: "none",
+              display: { xs: "none", md: "flex" },
+            }}
+          >
+            <MuiRouteLink route={""} color="white">
+              <Logo text={logoTxt} />
             </MuiRouteLink>
           </Typography>
 
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
-
-            <MuiRouteLink route={''} color='white'>
+            <MuiRouteLink route={""} color="white">
               <Logo text={logoTxt} />
             </MuiRouteLink>
-
           </Box>
           <Box
             sx={{
@@ -61,7 +72,7 @@ const Navbar = () => {
               sx={{ display: "flex", flexGrow: 1, justifyContent: "center" }}
             >
               {pages.map((page) => (
-                <MuiRouteLink route={page} color='white'>
+                <MuiRouteLink route={page} color="white">
                   <Button
                     key={page}
                     sx={{
@@ -81,9 +92,11 @@ const Navbar = () => {
             </Box>
             <Box sx={{ display: "flex" }}>
               <SearchField bgColor="#17191cd1" color="inherit" />
-              <MuiRouteLink route={'cart'} color='white'>
+              <MuiRouteLink route={"cart"} color="white">
                 <CustomIconButton>
-                  <ShoppingCartOutlinedIcon sx={{ color: 'white' }}/>
+                  <Badge badgeContent={cartLength} color="error">
+                    <ShoppingCartOutlinedIcon sx={{ color: "white" }} />
+                  </Badge>
                 </CustomIconButton>
               </MuiRouteLink>
             </Box>
@@ -93,9 +106,11 @@ const Navbar = () => {
             sx={{ alignItems: "center", display: { xs: "flex", md: "none" } }}
           >
             <SearchField bgColor="#1416187d" color="inherit" />
-            <MuiRouteLink route={'cart'} color='white'>
+            <MuiRouteLink route={"cart"} color="white">
               <CustomIconButton>
-                <ShoppingCartOutlinedIcon sx={{ color: 'white' }} />
+                <Badge badgeContent={cartLength} color="error">
+                  <ShoppingCartOutlinedIcon sx={{ color: "white" }} />
+                </Badge>
               </CustomIconButton>
             </MuiRouteLink>
 
@@ -122,14 +137,13 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MuiRouteLink route={page} color='black'>
+                <MuiRouteLink route={page} color="black">
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography fontStyle={"normal"} textAlign="center">
                       {page}
                     </Typography>
                   </MenuItem>
                 </MuiRouteLink>
-
               ))}
             </Menu>
           </Box>
@@ -145,7 +159,7 @@ export const Logo = ({ text }) => {
       variant="h6"
       sx={{
         mr: 2,
-        fontSize: { xs: "20px" },
+        fontSize: { xs: "25px" },
       }}
     >
       {text[0]}

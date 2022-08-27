@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./product-container.css";
 import { Button, Grid, Rating, Typography } from "@mui/material";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-
+import { MY_CONTEXT } from "../../context/GlobalContext";
+import { products } from '../../siteConfig'
 const ProductContainer = () => {
+  let { dispatch } = useContext(MY_CONTEXT);
+  let handleClick = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: { ...products[0], quantity: 1 } })
+  }
+  let handleRemove = () => {
+    dispatch({ type: 'REMOVE_FROM_CART', payload: { ...products[0], quantity: 1 } })
+  }
   return (
     <Grid
       columnGap={2}
@@ -70,6 +78,7 @@ const ProductContainer = () => {
             color="success"
             aria-label="delete"
             size="small"
+            onClick={handleRemove}
           >
             <RemoveIcon />
           </Button>
@@ -92,6 +101,7 @@ const ProductContainer = () => {
             color="error"
             aria-label="delete"
             size="small"
+            onClick={handleClick}
           >
             <AddIcon />
           </Button>

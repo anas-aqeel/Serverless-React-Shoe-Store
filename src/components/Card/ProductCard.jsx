@@ -11,7 +11,7 @@ import "./card.css";
 import { CustomIconButton } from "../Buttons/MuiIconButtons";
 
 
-export default function ProductCard({ data: { image, name, rating, price }, style }) {
+export default function ProductCard({ data: { images, name  }, style }) {
   return (
     <Card
       elevation={0}
@@ -44,7 +44,7 @@ export default function ProductCard({ data: { image, name, rating, price }, styl
           }}
           component="img"
           alt="green iguana"
-          image={image}
+          image={images[0]}
         />
         <CardContent sx={{ py: 0, px: 1, pt: 1 }}>
           <Typography
@@ -53,7 +53,7 @@ export default function ProductCard({ data: { image, name, rating, price }, styl
             sx={{ m: 0, color: "white" }}
             component="div"
           >
-            ⭐ {rating}
+            ⭐ {4.5}
           </Typography>
           <Typography
             gutterBottom
@@ -68,7 +68,7 @@ export default function ProductCard({ data: { image, name, rating, price }, styl
           sx={{ py: 0, display: "flex", justifyContent: "space-between" }}
         >
           <Typography sx={{ color: "white" }} variant="body2">
-            ${price}
+            ${20.06}
           </Typography>
           <Button size="small" className="add_to_cart_btn">
             Add to Cart
