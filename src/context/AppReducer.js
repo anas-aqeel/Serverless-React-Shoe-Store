@@ -13,7 +13,7 @@ let reducer = (state, { type, payload }) => {
     case "REMOVE_FROM_CART":
       return {
         ...state,
-        cartLength: state.cartLength - oldItem ? oldItem.quantity : 0,
+        cartLength: state.cartLength - 1? oldItem.quantity : 0,
         cart: [
           ...state.cart.filter((e) => e.id != payload.id),
           ...(oldItem?.quantity > 1
