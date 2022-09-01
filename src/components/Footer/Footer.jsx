@@ -28,7 +28,7 @@ const Footer = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing. Dolor sit
               amet consectetur adipisicing
             </div>
-            <SocialLinks />
+            <SocialLinks  gradient={'linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)'}/>
           </div>
         </Grid>
         <Grid

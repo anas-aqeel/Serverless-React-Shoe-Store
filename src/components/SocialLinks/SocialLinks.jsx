@@ -3,13 +3,12 @@ import { CustomIconButton } from '../Buttons/MuiIconButtons'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-const SocialLinks = () => {
+const SocialLinks = ({gradient}) => {
     return (
         <div>
             <CustomIconButton
                 style={{
-                    background:
-                        "linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)",
+                    background: gradient,
                     padding: '7px'    
                 }}
                 className="popular-products-arrows"
@@ -18,8 +17,7 @@ const SocialLinks = () => {
             </CustomIconButton>
             <CustomIconButton
                 style={{
-                    background:
-                        "linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)",
+                    background:  gradient,
                     padding: '7px'    
 
                 }}
@@ -29,8 +27,7 @@ const SocialLinks = () => {
             </CustomIconButton>
             <CustomIconButton
                 style={{
-                    background:
-                        "linear-gradient(99.25deg, #6193E3 9.55%, #F96758 96.08%)",
+                    background: gradient,
                     padding: '7px'    
 
                 }}

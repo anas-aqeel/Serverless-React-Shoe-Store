@@ -15,9 +15,11 @@ export const CartContainer = ({ data }) => {
       <div>
         {data.length > 0 ? (
           <div className="ctcheck">
-            {data?.map((product) => (
+            {data?.map((product) => {
+              console.log(product)
+               return (
               <div className="ctinfo-flex" key={product.id}>
-                <img src={product.image} key={product.id} alt={product.name} />
+                <img src={product.images[0]} key={product.id} alt={product.name} />
                 <div>
                   <p>{product.name}</p>
                   <p>
@@ -25,7 +27,7 @@ export const CartContainer = ({ data }) => {
                   </p>
                 </div>
               </div>
-            ))}
+            )})}
             <MuiRouteLink route={'/products'} color='white'>
               <Button className="continue-btn" startIcon={<WestIcon />}>
                 Continue Shopping
