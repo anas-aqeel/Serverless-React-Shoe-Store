@@ -1,41 +1,42 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./product-container.css";
 import { MY_CONTEXT } from "../../context/GlobalContext";
-import { products } from "../../siteConfig";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 const ProductContainer = ({ product }) => {
+  let { state: { cart } } = useContext(MY_CONTEXT);
   let { name, images, description, id } = product;
+  let existingProduct = cart.find(({ id: _id }) => _id == id);
+  let [quantity, setQuantity] = useState(existingProduct ? existingProduct.quantity : 1);
   let { dispatch } = useContext(MY_CONTEXT);
   let handleClick = () => {
-    dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity: 1,price: 43, } })
-  }
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: { ...product, quantity, price: 43 },
+    });
+    setQuantity(++quantity);
+  };
   let handleRemove = () => {
-    dispatch({ type: 'REMOVE_FROM_CART', payload: { ...product, quantity: 1,price: 43, } })
-  }
+    dispatch({
+      type: "REMOVE_FROM_CART",
+      payload: { ...product, quantity, price: 43 },
+    });
+    setQuantity(--quantity);
+  };
   return (
     <div className="card-wrapper">
       <div className="card">
         <div className="product-imgs">
           <div className="img-display">
             <div className="img-showcase">
-              <img
-                src={images[0]}
-                alt="shoe"
-              />
+              <img src={images[0]} alt="shoe" />
             </div>
-
           </div>
           <div className="img-select">
             {images.map((e) => (
               <div className="img-item">
                 <span className="link">
-                  <img
-                    height={120}
-                    width={115}
-                    src={e}
-                    alt="shoe"
-                  />
+                  <img height={120} width={115} src={e} alt="shoe" />
                 </span>
               </div>
             ))}
@@ -59,9 +60,7 @@ const ProductContainer = ({ product }) => {
 
           <div className="product-detail">
             <h2>about this item: </h2>
-            <p>
-             {description}
-            </p>
+            <p>{description}</p>
             <ul>
               <li>
                 Color: <span>Black</span>
@@ -82,11 +81,26 @@ const ProductContainer = ({ product }) => {
           </div>
 
           <div className="purchase-info">
-            <input type="number" min="0" value="1" className="quantity" />
-            <button type="button" onClick={handleClick} className="add_to_cart_btn_product">
+            <input
+              type="number"
+              min="1"
+              value={quantity - 1}
+              onChange={({ target: { value } }) => setQuantity(value)}
+              className="quantity"
+            />
+            <button
+              type="button"
+              onClick={handleClick}
+              className="add_to_cart_btn_product"
+            >
               Add to Cart <i className="fas fa-shopping-cart"></i>
             </button>
-            <button type="button" onClick={handleRemove} className="add_to_cart_btn_product">
+            <button
+              type="button"
+              disabled={quantity <= 1}
+              onClick={handleRemove}
+              className={quantity <= 1 ? 'disabled-btn' : "add_to_cart_btn_product"}
+            >
               Remove
             </button>
           </div>

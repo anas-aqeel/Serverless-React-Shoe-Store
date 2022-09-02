@@ -20,7 +20,7 @@ import { MY_CONTEXT } from "../../context/GlobalContext";
 
 const Navbar = () => {
   let {
-    state: { cartLength },
+    state: { cart },
   } = useContext(MY_CONTEXT);
   let pages = NavConfig.pages;
   let logoTxt = NavConfig.logo;
@@ -94,7 +94,7 @@ const Navbar = () => {
               <SearchField bgColor="#17191cd1" color="inherit" />
               <MuiRouteLink route={"cart"} color="white">
                 <CustomIconButton>
-                  <Badge badgeContent={cartLength} color="error">
+                  <Badge badgeContent={cart.length} color="error">
                     <ShoppingCartOutlinedIcon sx={{ color: "white" }} />
                   </Badge>
                 </CustomIconButton>
@@ -108,7 +108,7 @@ const Navbar = () => {
             <SearchField bgColor="#1416187d" color="inherit" />
             <MuiRouteLink route={"cart"} color="white">
               <CustomIconButton>
-                <Badge badgeContent={cartLength} color="error">
+                <Badge badgeContent={cart.length} color="error">
                   <ShoppingCartOutlinedIcon sx={{ color: "white" }} />
                 </Badge>
               </CustomIconButton>

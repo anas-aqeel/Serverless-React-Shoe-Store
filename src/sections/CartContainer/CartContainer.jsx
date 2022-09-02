@@ -16,7 +16,6 @@ export const CartContainer = ({ data }) => {
         {data.length > 0 ? (
           <div className="ctcheck">
             {data?.map((product) => {
-              console.log(product)
                return (
               <div className="ctinfo-flex" key={product.id}>
                 <img src={product.images[0]} key={product.id} alt={product.name} />

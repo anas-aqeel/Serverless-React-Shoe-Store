@@ -28,11 +28,11 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 
 export default function CartWidget() {
-  let { state: { cartLength } } = useContext(MY_CONTEXT)
+  let { state: { cart } } = useContext(MY_CONTEXT)
   return (
     <MuiRouteLink route={'/cart'}>
       <RootStyle>
-        <Badge showZero badgeContent={cartLength} color="error" max={99}>
+        <Badge showZero badgeContent={cart.length} color="error" max={99}>
           <Iconify icon="eva:shopping-cart-fill" width={24} height={24} />
         </Badge>
       </RootStyle>

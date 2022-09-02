@@ -5,7 +5,6 @@ let initialState = {
     popularProducts: [],
     products: [],
     cart: [],
-    cartLength: 0
 };
 export let MY_CONTEXT = createContext(initialState);
 
