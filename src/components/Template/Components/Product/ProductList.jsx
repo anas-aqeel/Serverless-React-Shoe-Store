@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 export default function ProductList() {
   let {
-    state: { products },
+    contextValues: { products },
   } = useContext(MY_CONTEXT);
   return (
     <Grid container spacing={3}>

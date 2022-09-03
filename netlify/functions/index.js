@@ -7,6 +7,7 @@ const getAllProductDetails = async function () {
   return products;
 };
 
+
 exports.handler = async function () {
   const statusCode = 200;
   const headers = {
@@ -20,3 +21,4 @@ exports.handler = async function () {
     body: JSON.stringify(data),
   };
 };
+

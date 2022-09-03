@@ -7,7 +7,7 @@ import { Grid } from "@mui/material";
 import "./popular-products.css";
 import { MY_CONTEXT } from "../../context/GlobalContext";
 const PopularProducts = () => {
-  let { state: { popularProducts } } = useContext(MY_CONTEXT);
+  let { contextValues: { popularProducts } } = useContext(MY_CONTEXT);
   return (
     <div className="main">
       <div className="popular-products-head">

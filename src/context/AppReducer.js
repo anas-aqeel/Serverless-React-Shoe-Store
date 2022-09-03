@@ -24,9 +24,6 @@ let reducer = (state, { type, payload }) => {
         ...state,
         cart: [...state.cart.filter((e) => e.id != payload.id)],
       };
-    case "SAVE_FETHCED_DATA":
-      return payload;
-
     default:
       break;
   }
