@@ -1,35 +1,34 @@
 import React, { useContext, useEffect } from "react";
-import CheckoutSection from "../sections/Checkout/Checkout";
-import "../index.css";
-import { Elements } from "@stripe/react-stripe-js";
 import { MY_CONTEXT } from "../context/GlobalContext";
-import { loadStripe } from "@stripe/stripe-js";
-import StripeCheckout from "../components/StripeCheckout/StripeCheckout";
 import { useState } from "react";
-const stripePromise = loadStripe(
-  "pk_test_51LaK8OH3X5K02oCgYrAQvQfuLRQsMy0Aq68BTm8TTfko47ExFgwYAYQoqyqkoGL5ZCGAg64uFREDDmbvtmliCytK00vQJ2wOeJ"
-);
+import "../index.css";
+import LoadingPage from "../components/Loader/LoadingPage";
+
+
 
 const Checkout = () => {
-  let { fetchClientSecret } = useContext(MY_CONTEXT);
-  let [clientSecret, setClientSecret] = useState();
+  let { state: { cart }, fetchClientSecret } = useContext(MY_CONTEXT);
+  let formatProducts = () => {
+    return cart.map(({ default_price, quantity }) => {
+      return { price: default_price, quantity }
+    });
+  };
 
+  let [url, setUrl] = useState('');
 
   useEffect(() => {
-    fetchClientSecret(3000).then(({ client_secret: _client_secret }) => {
-    setClientSecret(_client_secret);
+    fetchClientSecret(formatProducts()).then(({
+      url }) => {
+      window.location.href = url
+      setUrl(url);
     });
   }, []);
 
 
   return (
     <>
-      {clientSecret &&
-        <Elements stripe={stripePromise} options={{clientSecret}}>
-          
-          <StripeCheckout />
-        </Elements>
-      }
+
+      {!url && <LoadingPage />}
     </>
   );
 };

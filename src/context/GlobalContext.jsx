@@ -1,5 +1,6 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import { useState } from "react";
+import LoadingPage from "../components/Loader/LoadingPage.jsx";
 import reducer from "./AppReducer.js";
 
 let initialState = {
@@ -19,12 +20,14 @@ const GlobalContext = ({ children }) => {
 
     // fetching client secret
 
-    let fetchClientSecret = async (amount) => {
-        let clientSecretPromise = await fetch("https://ndure.netlify.app/.netlify/functions/checkout", {
+    let fetchClientSecret = async (products) => {
+        let clientSecretPromise = await fetch("https://ndure.netlify.app/.netlify/checkout", {
             method: 'POST',
-            body: JSON.stringify({ amount }),
+            body: JSON.stringify({
+                products,
+            }),
         });
-        let data =  await clientSecretPromise.json();
+        let data = await clientSecretPromise.json();
         return data;
     }
 
@@ -53,7 +56,9 @@ const GlobalContext = ({ children }) => {
 
     return (
         <MY_CONTEXT.Provider value={{ state, dispatch, contextValues, fetchClientSecret }}>
-            {contextValues.products ? children : 'hello'}
+            {contextValues.products ? children : 
+                <LoadingPage/>
+            }
         </MY_CONTEXT.Provider>
     );
 };
