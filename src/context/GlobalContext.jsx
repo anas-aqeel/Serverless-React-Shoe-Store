@@ -21,7 +21,7 @@ const GlobalContext = ({ children }) => {
     // fetching client secret
 
     let fetchClientSecret = async (products) => {
-        let clientSecretPromise = await fetch("https://ndure.netlify.app/.netlify/checkout", {
+        let clientSecretPromise = await fetch("https://ndure.netlify.app/.netlify/functions/checkout", {
             method: 'POST',
             body: JSON.stringify({
                 products,
