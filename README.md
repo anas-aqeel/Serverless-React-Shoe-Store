@@ -12,10 +12,6 @@ React Shoe Store is a Shoe Store website with stripe payment gateway integration
  - [Material UI](https://mui.com/)
 
 
-
-
-
-
 ## Functionalities
 
 ### Get Products dynamically from stripe API
@@ -26,7 +22,7 @@ React Shoe Store is a Shoe Store website with stripe payment gateway integration
 
 ### Payment gateway with stripe checkout
 
-
+### Additionally I used netlify serverless functions for stripe integration
 
 
 ## Preview
